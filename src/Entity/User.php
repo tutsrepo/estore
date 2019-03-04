@@ -27,6 +27,18 @@ class User implements UserInterface
      * @ORM\Column(type="integer")
      * @Groups({"read"})
      */
+    const ROLE_COMMENTATOR = 'ROLE_COMMENTATOR';
+    const ROLE_WRITER = 'ROLE_WRITER';
+    const ROLE_EDITOR = 'ROLE_EDITOR';
+    const ROLE_ADMIN = 'ROLE_ADMIN';
+    const ROLE_SUPERADMIN = 'ROLE_SUPERADMIN';
+    const DEFAULT_ROLES = [self::ROLE_COMMENTATOR];
+
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
     private $id;
 
     /**
@@ -51,6 +63,8 @@ class User implements UserInterface
      * @Groups({"read"})
      */
     private $email;
+
+    private $roles;
 
     /**
      * @ORM\Column(type="datetime")
@@ -159,9 +173,8 @@ class User implements UserInterface
     {
     }    
 
-
     public function getRoles(): array
     {
-        return $this->roles;
+        return array('ROLE_USER');
     }    
 }
