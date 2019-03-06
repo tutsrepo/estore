@@ -1,0 +1,669 @@
+{
+	"info": {
+		"_postman_id": "b0954f17-2f26-4367-a2c7-88e79e4e767d",
+		"name": "Symfony-Project-Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/category/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\" : \"Electronics\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/category/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"category",
+								"add"
+							]
+						},
+						"description": "Add Category"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/category/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\" : \"Electronics\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/category/list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"category",
+								"list"
+							]
+						},
+						"description": "Fetch Category List"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/category/1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\" : \"Electronics\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/category/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"category",
+								"1"
+							]
+						},
+						"description": "Fetch Category details using Category Id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/category/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\" : \"Electronics\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/category/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"category",
+								"1"
+							]
+						},
+						"description": "Delete Category"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "The Api Platform",
+			"item": [
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "Fetch Category List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Category Detail by Category Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/categories/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories",
+										"2"
+									]
+								},
+								"description": "Category Detail by Category Id"
+							},
+							"response": []
+						},
+						{
+							"name": "Create New Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NTE4MjgwNjEsImV4cCI6MTU1MTgzMTY2MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjUifQ.R7Er9mYQ2IJZ6QduyYcmmAWeheFeKKnvd42YBsB1K4FyGsrlTWZ0zuXg2DpyHlpy3bS6ldFWRV3vMIGBWFWFMeO0H7X3uBC0IiP-5monLuPndnx2qz1Rc5S22q72OpB1MmeelTTtSi_9BIvpJPqfsBcGdgrC2McDKV1aT1usfl-bdWuH-kUqqjdPlaPgzgooPP5eGqXwHaynxlNmkLT74Nf3TUVNdIhWITnVJUHdTRPD1ABSIZ5zc3434AjvaEitRxPkLhaETJI6nl-ItMq6k1m_epuJhzDO-i0X1ZXzcX9cMxEL_8R7VrghhZg3733Hg5omfB_j-3TK4XxmYfrYFPr2OCERMCzNN7PoWO8eduncwqgJIKj5CvO7_hEK4iBIXMKWwpwdyB6wVahziiTBI4M52YJnyKgijPUzW6xHlTHvX1Y5KOMIxgQT-RN3V86lEee5bviVFKy3LWaf374_Pw-7TCkB_XPYLpPWGxCFrdMUmeS6lXb3mlHVdN55h-68PwNTKOipyOxQNvJPkszqZGzVmmbfqqBMWNpL7X8QYIpBYounpDQJDixRLy-WoIWjr5nvxa6XMgKICVB0eK22DGUrDlcFFMkBHBhnhvIi_K0yY5ot9Xv5Fvi_ZDj8SazKe1Z2FUbrSavBAGZ1w4RcPwYAigcJEBn-f4Z4qlRjRn0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Monitors\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/categories/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories",
+										""
+									]
+								},
+								"description": "{\n\t\"name\" : \"Monitors\"\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NTE4MjgwNjEsImV4cCI6MTU1MTgzMTY2MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjUifQ.R7Er9mYQ2IJZ6QduyYcmmAWeheFeKKnvd42YBsB1K4FyGsrlTWZ0zuXg2DpyHlpy3bS6ldFWRV3vMIGBWFWFMeO0H7X3uBC0IiP-5monLuPndnx2qz1Rc5S22q72OpB1MmeelTTtSi_9BIvpJPqfsBcGdgrC2McDKV1aT1usfl-bdWuH-kUqqjdPlaPgzgooPP5eGqXwHaynxlNmkLT74Nf3TUVNdIhWITnVJUHdTRPD1ABSIZ5zc3434AjvaEitRxPkLhaETJI6nl-ItMq6k1m_epuJhzDO-i0X1ZXzcX9cMxEL_8R7VrghhZg3733Hg5omfB_j-3TK4XxmYfrYFPr2OCERMCzNN7PoWO8eduncwqgJIKj5CvO7_hEK4iBIXMKWwpwdyB6wVahziiTBI4M52YJnyKgijPUzW6xHlTHvX1Y5KOMIxgQT-RN3V86lEee5bviVFKy3LWaf374_Pw-7TCkB_XPYLpPWGxCFrdMUmeS6lXb3mlHVdN55h-68PwNTKOipyOxQNvJPkszqZGzVmmbfqqBMWNpL7X8QYIpBYounpDQJDixRLy-WoIWjr5nvxa6XMgKICVB0eK22DGUrDlcFFMkBHBhnhvIi_K0yY5ot9Xv5Fvi_ZDj8SazKe1Z2FUbrSavBAGZ1w4RcPwYAigcJEBn-f4Z4qlRjRn0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/categories/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories",
+										"3"
+									]
+								},
+								"description": "Delete existing Category"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NTE4MjgwNjEsImV4cCI6MTU1MTgzMTY2MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjUifQ.R7Er9mYQ2IJZ6QduyYcmmAWeheFeKKnvd42YBsB1K4FyGsrlTWZ0zuXg2DpyHlpy3bS6ldFWRV3vMIGBWFWFMeO0H7X3uBC0IiP-5monLuPndnx2qz1Rc5S22q72OpB1MmeelTTtSi_9BIvpJPqfsBcGdgrC2McDKV1aT1usfl-bdWuH-kUqqjdPlaPgzgooPP5eGqXwHaynxlNmkLT74Nf3TUVNdIhWITnVJUHdTRPD1ABSIZ5zc3434AjvaEitRxPkLhaETJI6nl-ItMq6k1m_epuJhzDO-i0X1ZXzcX9cMxEL_8R7VrghhZg3733Hg5omfB_j-3TK4XxmYfrYFPr2OCERMCzNN7PoWO8eduncwqgJIKj5CvO7_hEK4iBIXMKWwpwdyB6wVahziiTBI4M52YJnyKgijPUzW6xHlTHvX1Y5KOMIxgQT-RN3V86lEee5bviVFKy3LWaf374_Pw-7TCkB_XPYLpPWGxCFrdMUmeS6lXb3mlHVdN55h-68PwNTKOipyOxQNvJPkszqZGzVmmbfqqBMWNpL7X8QYIpBYounpDQJDixRLy-WoIWjr5nvxa6XMgKICVB0eK22DGUrDlcFFMkBHBhnhvIi_K0yY5ot9Xv5Fvi_ZDj8SazKe1Z2FUbrSavBAGZ1w4RcPwYAigcJEBn-f4Z4qlRjRn0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Monitors\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/categories/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories",
+										"3"
+									]
+								},
+								"description": "Use put method and pass json\n\n{\n\t\"name\" : \"Desktops\"\n}"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "Product Add",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NTE4MjgwNjEsImV4cCI6MTU1MTgzMTY2MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjUifQ.R7Er9mYQ2IJZ6QduyYcmmAWeheFeKKnvd42YBsB1K4FyGsrlTWZ0zuXg2DpyHlpy3bS6ldFWRV3vMIGBWFWFMeO0H7X3uBC0IiP-5monLuPndnx2qz1Rc5S22q72OpB1MmeelTTtSi_9BIvpJPqfsBcGdgrC2McDKV1aT1usfl-bdWuH-kUqqjdPlaPgzgooPP5eGqXwHaynxlNmkLT74Nf3TUVNdIhWITnVJUHdTRPD1ABSIZ5zc3434AjvaEitRxPkLhaETJI6nl-ItMq6k1m_epuJhzDO-i0X1ZXzcX9cMxEL_8R7VrghhZg3733Hg5omfB_j-3TK4XxmYfrYFPr2OCERMCzNN7PoWO8eduncwqgJIKj5CvO7_hEK4iBIXMKWwpwdyB6wVahziiTBI4M52YJnyKgijPUzW6xHlTHvX1Y5KOMIxgQT-RN3V86lEee5bviVFKy3LWaf374_Pw-7TCkB_XPYLpPWGxCFrdMUmeS6lXb3mlHVdN55h-68PwNTKOipyOxQNvJPkszqZGzVmmbfqqBMWNpL7X8QYIpBYounpDQJDixRLy-WoIWjr5nvxa6XMgKICVB0eK22DGUrDlcFFMkBHBhnhvIi_K0yY5ot9Xv5Fvi_ZDj8SazKe1Z2FUbrSavBAGZ1w4RcPwYAigcJEBn-f4Z4qlRjRn0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"category_id\" : 2,\n\t\"name\" : \"Dell Laptop\",\n\t\"sku\" : \"1234\",\n\t\"price\" : 12,\n\t\"quantity\" : 1\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									]
+								},
+								"description": "Add Product"
+							},
+							"response": []
+						},
+						{
+							"name": "Product Edit",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NTE4MjgwNjEsImV4cCI6MTU1MTgzMTY2MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjUifQ.R7Er9mYQ2IJZ6QduyYcmmAWeheFeKKnvd42YBsB1K4FyGsrlTWZ0zuXg2DpyHlpy3bS6ldFWRV3vMIGBWFWFMeO0H7X3uBC0IiP-5monLuPndnx2qz1Rc5S22q72OpB1MmeelTTtSi_9BIvpJPqfsBcGdgrC2McDKV1aT1usfl-bdWuH-kUqqjdPlaPgzgooPP5eGqXwHaynxlNmkLT74Nf3TUVNdIhWITnVJUHdTRPD1ABSIZ5zc3434AjvaEitRxPkLhaETJI6nl-ItMq6k1m_epuJhzDO-i0X1ZXzcX9cMxEL_8R7VrghhZg3733Hg5omfB_j-3TK4XxmYfrYFPr2OCERMCzNN7PoWO8eduncwqgJIKj5CvO7_hEK4iBIXMKWwpwdyB6wVahziiTBI4M52YJnyKgijPUzW6xHlTHvX1Y5KOMIxgQT-RN3V86lEee5bviVFKy3LWaf374_Pw-7TCkB_XPYLpPWGxCFrdMUmeS6lXb3mlHVdN55h-68PwNTKOipyOxQNvJPkszqZGzVmmbfqqBMWNpL7X8QYIpBYounpDQJDixRLy-WoIWjr5nvxa6XMgKICVB0eK22DGUrDlcFFMkBHBhnhvIi_K0yY5ot9Xv5Fvi_ZDj8SazKe1Z2FUbrSavBAGZ1w4RcPwYAigcJEBn-f4Z4qlRjRn0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"category_id\" : 2,\n\t\"name\" : \"Dell Laptop123\",\n\t\"sku\" : \"1234\",\n\t\"price\" : 12,\n\t\"quantity\" : 1\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/products/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"10"
+									]
+								},
+								"description": "Add Product"
+							},
+							"response": []
+						},
+						{
+							"name": "Product List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									]
+								},
+								"description": "Returns Product List"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NTE4MjgwNjEsImV4cCI6MTU1MTgzMTY2MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjUifQ.R7Er9mYQ2IJZ6QduyYcmmAWeheFeKKnvd42YBsB1K4FyGsrlTWZ0zuXg2DpyHlpy3bS6ldFWRV3vMIGBWFWFMeO0H7X3uBC0IiP-5monLuPndnx2qz1Rc5S22q72OpB1MmeelTTtSi_9BIvpJPqfsBcGdgrC2McDKV1aT1usfl-bdWuH-kUqqjdPlaPgzgooPP5eGqXwHaynxlNmkLT74Nf3TUVNdIhWITnVJUHdTRPD1ABSIZ5zc3434AjvaEitRxPkLhaETJI6nl-ItMq6k1m_epuJhzDO-i0X1ZXzcX9cMxEL_8R7VrghhZg3733Hg5omfB_j-3TK4XxmYfrYFPr2OCERMCzNN7PoWO8eduncwqgJIKj5CvO7_hEK4iBIXMKWwpwdyB6wVahziiTBI4M52YJnyKgijPUzW6xHlTHvX1Y5KOMIxgQT-RN3V86lEee5bviVFKy3LWaf374_Pw-7TCkB_XPYLpPWGxCFrdMUmeS6lXb3mlHVdN55h-68PwNTKOipyOxQNvJPkszqZGzVmmbfqqBMWNpL7X8QYIpBYounpDQJDixRLy-WoIWjr5nvxa6XMgKICVB0eK22DGUrDlcFFMkBHBhnhvIi_K0yY5ot9Xv5Fvi_ZDj8SazKe1Z2FUbrSavBAGZ1w4RcPwYAigcJEBn-f4Z4qlRjRn0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/products/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"10"
+									]
+								},
+								"description": "Deleting a product by id"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "User List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								},
+								"description": "List of Users in system"
+							},
+							"response": []
+						},
+						{
+							"name": "Add User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"user5\",\n\t\"password\" : \"user5\",\n\t\"name\" : \"User Four\",\n\t\"email\" : \"user5@user5.com\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								},
+								"description": "Add New User"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"2"
+									]
+								},
+								"description": "Delete User"
+							},
+							"response": []
+						},
+						{
+							"name": "Login Check",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"user5\",\n\t\"password\": \"user5\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/login_check",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login_check"
+									]
+								},
+								"description": "Login Check"
+							},
+							"response": []
+						},
+						{
+							"name": "Authenticated user Request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NTE3MTU2NjAsImV4cCI6MTU1MTcxOTI2MCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjMifQ.e_9jlz6U3PzdElVYzQ6cEKvXziTkHm9u9Y3ykJbFxPghr5qa42z9YnVXyeSGLS5VBi2XbWRaGUcqP1GMQn0Tw7EAOBKN__8cNQKG-B9Z8ata0CLZcd9_kDTnkkYfGdZ7id-uPnuN_FSEwv8yCuYfwWg5FlZ-lclm4iXdSLgJwvwvKaSrIKEltDs7fodpVPDif4SV6-KBtml8BOvTn6VOYVMFxsxlZ0Df0pth7wWdxfRp6yWwqfkW8safHpKLK5F9-xeElztTzjeNP25CX_PqRT0RWfWEaHauNgIafozBb0oWPPkcI7meHTgI2BZKA25oRJX8DsbqJq2cfQ71BMWLN5k3wrOCd4LJi75l3Wc_oXWVOcyJFZnvX65oKZ0ms2vgX8AUPCSPOHiAmODl8ARv7L-QpiQKJ2v154P02r8hbFY-YI72laWQfjzaCqru9_tkih8npiMIsCKlVFbxI05jXVJG9YoXc0L1v4oT-7Li6utHdXin9NLdBm9kbYaIVTvnfsvLWrlgexbK8HDXBLVrbgDhsb3bBKFM1ZjvghaPW2Z152BxvXCpbOAfWG16wE3mIHzpS4qC08qPP_PfeKS_8twtVN8YkuuHKbFmXmXW5VSwSNM1qWrcsXnybSJhIkqkxluoMvAbJyhFM_ftkzdsmY_SkWicJPeiYby2XozKQTQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								},
+								"description": "Allows users with role user to fetch user list"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "List of Available Apis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/api",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api"
+							]
+						},
+						"description": "Using Api Platform gives a list of Available Apis in the system"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category-post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
