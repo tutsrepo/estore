@@ -9,9 +9,28 @@ use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
- * @ApiResource()
+ * @ApiResource(
+ *      itemOperations={
+ *         "post"={
+ *             "access_control"="is_granted('IS_AUTHENTICATED_FULLY')",
+ *         },
+ *          "get"={},
+ *         "put"={
+ *             "access_control"="is_granted('IS_AUTHENTICATED_FULLY')",
+ *         },
+  *         "delete"={
+ *             "access_control"="is_granted('IS_AUTHENTICATED_FULLY')",
+ *         },
+ *      },
+ *      collectionOperations={
+ *         "post"={
+ *             "access_control"="is_granted('IS_AUTHENTICATED_FULLY')"
+ *         },
+ *          "get"={}
+ *      }  
+ * )
  */
-class Category
+class Category implements \JsonSerializable
 {
     /**
      * @ORM\Id()
@@ -45,6 +64,8 @@ class Category
     public function __construct()
     {
         $this->products = new ArrayCollection();
+        $this->setCreatedAt(new \DateTime());
+        $this->setModifiedAt(new \DateTime());
     }
 
     public function getId(): ?int
@@ -91,12 +112,22 @@ class Category
         return $this->modified_at;
     }
 
+    /**
+    * @ORM\PreUpdate
+    */    
+
     public function setModifiedAt(\DateTimeInterface $modified_at): self
     {
         $this->modified_at = $modified_at;
 
         return $this;
     }    
-
+    public function jsonSerialize()
+    {
+        return [
+            "id"=> $this->getId(),
+            "name" => $this->getName()
+        ];
+    }
 
 }

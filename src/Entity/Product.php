@@ -7,7 +7,26 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *      itemOperations={
+ *         "post"={
+ *             "access_control"="is_granted('IS_AUTHENTICATED_FULLY')",
+ *         },
+ *          "get"={},
+ *         "put"={
+ *             "access_control"="is_granted('IS_AUTHENTICATED_FULLY')",
+ *         },
+  *         "delete"={
+ *             "access_control"="is_granted('IS_AUTHENTICATED_FULLY')",
+ *         },
+ *      },
+ *      collectionOperations={
+ *         "post"={
+ *             "access_control"="is_granted('IS_AUTHENTICATED_FULLY')"
+ *         },
+ *          "get"={}
+ *      }  
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  */
 class Product
