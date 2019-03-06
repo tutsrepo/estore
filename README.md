@@ -1,9 +1,9 @@
 # Estore Demo API
 
-A API for inventory managment built for managing products of Estore.
+A API for inventory managment built for managing products of Estore. Developed using Symfony 4,Doctrine, Mysql and the API Platform. Deployed in Docker.
 
-Main Packages Used
-====================
+Main Symfony 4 Packages Used
+==================================
 - The API Platform - For API Development 
   - Used Annotations for access control
 - Doctrine ORM
@@ -13,3 +13,4 @@ Main Packages Used
 - Monolog - Used for logging messages
 - PHPUnit
   - Unit test cases for API token generation 
+  
