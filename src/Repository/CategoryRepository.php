@@ -47,13 +47,4 @@ class CategoryRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function findOneBySomeField($id)
-    {
-        $conn = $this->getEntityManager()->getConnection();
-        $sql = 'select * from category';
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        print_r($stmt->fetchAll());die;
-    }
-
 }
