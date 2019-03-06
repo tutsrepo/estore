@@ -27,12 +27,6 @@ class User implements UserInterface
      * @ORM\Column(type="integer")
      * @Groups({"read"})
      */
-    const ROLE_COMMENTATOR = 'ROLE_COMMENTATOR';
-    const ROLE_WRITER = 'ROLE_WRITER';
-    const ROLE_EDITOR = 'ROLE_EDITOR';
-    const ROLE_ADMIN = 'ROLE_ADMIN';
-    const ROLE_SUPERADMIN = 'ROLE_SUPERADMIN';
-    const DEFAULT_ROLES = [self::ROLE_COMMENTATOR];
 
     /**
      * @ORM\Id()
